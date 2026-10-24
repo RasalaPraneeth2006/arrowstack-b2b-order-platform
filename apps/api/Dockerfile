@@ -2,8 +2,8 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Install native compilation dependencies for bcrypt and Prisma
-RUN apk add --no-cache libc6-compat openssl python3 make g++
+# Install Prisma engine dependencies (bcryptjs is pure JS, no native build tools needed)
+RUN apk add --no-cache libc6-compat openssl
 
 COPY package*.json ./
 COPY prisma ./prisma/
