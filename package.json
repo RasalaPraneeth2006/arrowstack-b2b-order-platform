@@ -1,0 +1,15 @@
+{
+  "name": "arrowstack-b2b-order-platform",
+  "private": true,
+  "scripts": {
+    "dev:api": "npm --prefix apps/api run start:dev",
+    "dev:web": "npm --prefix apps/web run dev",
+    "build:api": "npm --prefix apps/api run build",
+    "build:web": "npm --prefix apps/web run build",
+    "build": "npm --prefix apps/api run build && npm --prefix apps/web run build",
+    "test": "npm --prefix apps/api run test",
+    "test:api": "npm --prefix apps/api run test",
+    "prisma:generate": "npm --prefix apps/api run prisma:generate",
+    "seed": "npm --prefix apps/api run seed"
+  }
+}
